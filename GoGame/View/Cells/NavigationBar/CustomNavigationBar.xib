@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavigationBar" customModule="GoGame" customModuleProvider="target">
+            <connections>
+                <outlet property="bellButton" destination="F3L-tu-uUS" id="bfg-f1-iBc"/>
+                <outlet property="lineButton" destination="dqj-G7-5Js" id="PE9-dH-dvx"/>
+                <outlet property="searchButton" destination="xIJ-b6-wOd" id="3EL-rf-JVi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocp-D1-kG1">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqj-G7-5Js">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="t7C-bp-ajm"/>
+                            </constraints>
+                            <color key="tintColor" red="0.080682980720000005" green="0.15686275059999999" blue="0.1168055972" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" image="line.3.horizontal" catalog="system"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3L-tu-uUS">
+                            <rect key="frame" x="270" y="0.0" width="50" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="WCK-Xa-KRK"/>
+                            </constraints>
+                            <color key="tintColor" red="0.080682980720000005" green="0.15686275059999999" blue="0.1168055972" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" image="bell.badge" catalog="system"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIJ-b6-wOd">
+                            <rect key="frame" x="216" y="0.0" width="50" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="hQK-Zz-qAV"/>
+                            </constraints>
+                            <color key="tintColor" red="0.042995818480000003" green="0.15686275059999999" blue="0.049106182989999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" image="magnifyingglass" catalog="system"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="xIJ-b6-wOd" firstAttribute="top" secondItem="ocp-D1-kG1" secondAttribute="top" id="6MO-sz-5hI"/>
+                        <constraint firstItem="F3L-tu-uUS" firstAttribute="leading" secondItem="xIJ-b6-wOd" secondAttribute="trailing" constant="4" id="OS7-CY-saU"/>
+                        <constraint firstItem="xIJ-b6-wOd" firstAttribute="height" secondItem="ocp-D1-kG1" secondAttribute="height" multiplier="0.9" id="VUm-eN-eG4"/>
+                        <constraint firstItem="dqj-G7-5Js" firstAttribute="leading" secondItem="ocp-D1-kG1" secondAttribute="leading" id="aAg-9v-u16"/>
+                        <constraint firstItem="F3L-tu-uUS" firstAttribute="top" secondItem="ocp-D1-kG1" secondAttribute="top" id="ezC-t8-aoI"/>
+                        <constraint firstItem="dqj-G7-5Js" firstAttribute="top" secondItem="ocp-D1-kG1" secondAttribute="top" id="fTg-29-7JY"/>
+                        <constraint firstItem="dqj-G7-5Js" firstAttribute="height" secondItem="ocp-D1-kG1" secondAttribute="height" multiplier="0.9" id="gbc-ZH-ucJ"/>
+                        <constraint firstAttribute="trailing" secondItem="F3L-tu-uUS" secondAttribute="trailing" id="tYr-0Y-kQi"/>
+                        <constraint firstItem="F3L-tu-uUS" firstAttribute="height" secondItem="ocp-D1-kG1" secondAttribute="height" multiplier="0.9" id="vKm-sg-qyw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ocp-D1-kG1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9Wd-1b-3OM"/>
+                <constraint firstItem="ocp-D1-kG1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VFF-8r-W56"/>
+                <constraint firstAttribute="trailing" secondItem="ocp-D1-kG1" secondAttribute="trailing" id="iGa-39-V8h"/>
+                <constraint firstAttribute="bottom" secondItem="ocp-D1-kG1" secondAttribute="bottom" id="kgy-jG-SPk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="479.38931297709922" y="-510.56338028169017"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bell.badge" catalog="system" width="117" height="128"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+    </resources>
+</document>

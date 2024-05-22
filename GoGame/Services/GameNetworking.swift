@@ -1,5 +1,5 @@
 //
-//  Networking.swift
+//  GameNetworking.swift
 //  GoGame
 //
 //  Created by FFK on 20.05.2024.
@@ -13,46 +13,66 @@ enum APIError: Error {
     case invalidData
     case jsonParsingFailure
     case invalidUrl
+    
+    var errorMessage: String {
+        switch self {
+        case .requestFailed:
+            return "Request failed. Please check your internet connection and try again."
+        case .responseUnsuccessful:
+            return "Server response was unsuccessful."
+        case .invalidData:
+            return "Invalid data received from the server."
+        case .jsonParsingFailure:
+            return "Failed to parse JSON data."
+        case .invalidUrl:
+            return "Invalid URL provided."
+        }
+    }
 }
 
-final class Networking {
+final class GameNetworking {
     
-    static let shared = Networking()
+    static let shared = GameNetworking()
     
-    private let baseURL = "https://api.rawg.io/api/games"
+    let baseURL = "https://api.rawg.io/api/games"
     private let apiKey = "b747ad04c2f14ba68b20fbfcf5bf6002"
     
     private init() {}
     
-    func fetchGames(completion: @escaping (Result<[Game], APIError>) -> Void) {
+    func fetchGames(completion: @escaping (Result<GameResponse, APIError>) -> Void) {
         
-        guard let url = URL(string: "\(baseURL)?key=\(apiKey)") else {
+        guard let url = URL(string:"\(baseURL)?key=\(apiKey)") else {
             completion(.failure(.invalidUrl))
+            print(APIError.invalidUrl)
             return
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let _ = error {
                 completion(.failure(.requestFailed))
+                print(APIError.requestFailed)
                 return
             }
             
             guard let data = data else {
                 completion(.failure(.invalidData))
+                print(APIError.invalidData)
                 return
             }
             
             do {
                 let decodedResponse = try JSONDecoder().decode(GameResponse.self, from: data)
-                completion(.success(decodedResponse.results))
+                completion(.success(decodedResponse))
+               
             } catch {
                 completion(.failure(.jsonParsingFailure))
+                print(APIError.jsonParsingFailure)
             }
         }
         task.resume()
     }
     
-    func fetchGameDetails(gameID: Int,completion: @escaping(Result<GameDetail, APIError>) -> Void) {
+    func fetchGameDetails(gameID: Int, completion: @escaping(Result<GameDetail, APIError>) -> Void) {
         
         guard let url = URL(string: "\(baseURL)\(gameID)?key=\(apiKey)") else {
             completion(.failure(.invalidUrl))

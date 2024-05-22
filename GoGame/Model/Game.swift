@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct GameResponse: Decodable {
+    let results: [Game]
+}
+
 struct Game: Decodable {
     let id: Int
     let name: String
@@ -37,6 +41,4 @@ struct GameDetail: Decodable {
     }
 }
 
-struct GameResponse: Decodable {
-    let results: [Game]
-}
+
