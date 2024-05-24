@@ -7,11 +7,18 @@
 
 import UIKit
 
+
+protocol CustomNavigationProtocol: AnyObject {
+    func searchButtonTapped()
+}
+
 class CustomNavigationBar: UIView {
     
     @IBOutlet weak var lineButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var bellButton: UIButton!
+    
+    weak var delegate: CustomNavigationProtocol?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,6 +40,18 @@ class CustomNavigationBar: UIView {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
         addSubview(view)
+        setUp()
+    }
+    
+    private func setUp() {
+        lineButton.setImage(UIImage(systemName: "line.3.horizontal"), for: .normal)
+        searchButton.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        bellButton.setImage(UIImage(systemName: "bell.badge"), for: .normal)
+
+    }
+    
+    @IBAction func searchButton(_ sender: UIButton) {
+        delegate?.searchButtonTapped()
     }
     
 }

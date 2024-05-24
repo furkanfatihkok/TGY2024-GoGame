@@ -11,18 +11,25 @@ final class HomeViewController: UIViewController {
     
     @IBOutlet private weak var customNavigationBar: CustomNavigationBar!
     @IBOutlet private weak var headerView: HeaderView!
-    @IBOutlet weak var pageView: PageView!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var pageView: PageView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private var customSearchBar: SearchBar!
+    @IBOutlet weak var newHeaderView: HeaderView!
+    @IBOutlet weak var customTabBar: CustomTabBar!
     
     private var games: [Game] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        customNavigationBar.delegate = self
         
         pageView.pageImage.layer.cornerRadius = 24
         
         headerView.headerLabel.text = "Game News"
         headerView.viewLabel.text = "View all"
+        
         
         collectionView.register(UINib(nibName: GamesCell.identifier, bundle: nil), forCellWithReuseIdentifier: GamesCell.identifier)
         
@@ -48,6 +55,16 @@ final class HomeViewController: UIViewController {
         let imageURL = games.map { $0.backgroundImage }
         pageView.updateImage(with: imageURL)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailVC"  {
+            if let detailVC = segue.destination as? DetailViewController,
+               let indexPath = collectionView.indexPathsForSelectedItems?.first {
+                let selectedGame = games[indexPath.row]
+                detailVC.selectedID = selectedGame.id
+            }
+        }
+    }
 }
 
 //MARK: - Collection View DataSource & Delegate
@@ -68,8 +85,33 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "detailVC", sender: self)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 140)
     }
+    
+}
+
+//MARK: - CustomNavigationProtocol
+
+extension HomeViewController: CustomNavigationProtocol {
+    
+    func searchButtonTapped() {
+        customNavigationBar.bellButton.isHidden = true
+        customNavigationBar.lineButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        customNavigationBar.searchButton.isHidden = true
+        
+        pageView.isHidden = true
+        headerView.isHidden = true
+        
+        customSearchBar.isHidden = false
+        
+    }
+    
 }
 

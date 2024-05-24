@@ -74,7 +74,7 @@ final class GameNetworking {
     
     func fetchGameDetails(gameID: Int, completion: @escaping(Result<GameDetail, APIError>) -> Void) {
         
-        guard let url = URL(string: "\(baseURL)\(gameID)?key=\(apiKey)") else {
+        guard let url = URL(string: "\(baseURL)/\(gameID)?key=\(apiKey)") else {
             completion(.failure(.invalidUrl))
             return
         }

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,44 +25,54 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqj-G7-5Js">
-                            <rect key="frame" x="0.0" y="0.0" width="50" height="54"/>
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="50" id="ek9-AC-R8N"/>
                                 <constraint firstAttribute="width" constant="50" id="t7C-bp-ajm"/>
                             </constraints>
                             <color key="tintColor" red="0.080682980720000005" green="0.15686275059999999" blue="0.1168055972" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="gray" image="line.3.horizontal" catalog="system"/>
+                            <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
+                                <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </buttonConfiguration>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3L-tu-uUS">
-                            <rect key="frame" x="270" y="0.0" width="50" height="54"/>
+                            <rect key="frame" x="270" y="0.0" width="50" height="50"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="50" id="SuZ-2c-Dcb"/>
                                 <constraint firstAttribute="width" constant="50" id="WCK-Xa-KRK"/>
                             </constraints>
                             <color key="tintColor" red="0.080682980720000005" green="0.15686275059999999" blue="0.1168055972" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="gray" image="bell.badge" catalog="system"/>
+                            <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
+                                <imageReference key="image" image="bell.badge" catalog="system" symbolScale="default"/>
+                                <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </buttonConfiguration>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIJ-b6-wOd">
-                            <rect key="frame" x="216" y="0.0" width="50" height="54"/>
+                            <rect key="frame" x="216" y="0.0" width="50" height="50"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="50" id="cht-i7-ZbZ"/>
                                 <constraint firstAttribute="width" constant="50" id="hQK-Zz-qAV"/>
                             </constraints>
                             <color key="tintColor" red="0.042995818480000003" green="0.15686275059999999" blue="0.049106182989999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="gray" image="magnifyingglass" catalog="system"/>
+                            <buttonConfiguration key="configuration" style="gray" image="magnifyingglass" catalog="system" cornerStyle="capsule">
+                                <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="searchButton:" destination="-1" eventType="touchUpInside" id="x3C-5O-Vb3"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="xIJ-b6-wOd" firstAttribute="top" secondItem="ocp-D1-kG1" secondAttribute="top" id="6MO-sz-5hI"/>
                         <constraint firstItem="F3L-tu-uUS" firstAttribute="leading" secondItem="xIJ-b6-wOd" secondAttribute="trailing" constant="4" id="OS7-CY-saU"/>
-                        <constraint firstItem="xIJ-b6-wOd" firstAttribute="height" secondItem="ocp-D1-kG1" secondAttribute="height" multiplier="0.9" id="VUm-eN-eG4"/>
                         <constraint firstItem="dqj-G7-5Js" firstAttribute="leading" secondItem="ocp-D1-kG1" secondAttribute="leading" id="aAg-9v-u16"/>
                         <constraint firstItem="F3L-tu-uUS" firstAttribute="top" secondItem="ocp-D1-kG1" secondAttribute="top" id="ezC-t8-aoI"/>
                         <constraint firstItem="dqj-G7-5Js" firstAttribute="top" secondItem="ocp-D1-kG1" secondAttribute="top" id="fTg-29-7JY"/>
-                        <constraint firstItem="dqj-G7-5Js" firstAttribute="height" secondItem="ocp-D1-kG1" secondAttribute="height" multiplier="0.9" id="gbc-ZH-ucJ"/>
                         <constraint firstAttribute="trailing" secondItem="F3L-tu-uUS" secondAttribute="trailing" id="tYr-0Y-kQi"/>
-                        <constraint firstItem="F3L-tu-uUS" firstAttribute="height" secondItem="ocp-D1-kG1" secondAttribute="height" multiplier="0.9" id="vKm-sg-qyw"/>
                     </constraints>
                 </view>
             </subviews>
@@ -79,7 +90,9 @@
     </objects>
     <resources>
         <image name="bell.badge" catalog="system" width="117" height="128"/>
-        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

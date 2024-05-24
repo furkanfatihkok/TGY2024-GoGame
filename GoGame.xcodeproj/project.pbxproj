@@ -31,6 +31,12 @@
 		02A66D812BFE45FF008623E9 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02A66D7A2BFE45FF008623E9 /* Roboto-Medium.ttf */; };
 		02A66D822BFE45FF008623E9 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02A66D7B2BFE45FF008623E9 /* Roboto-Regular.ttf */; };
 		02A66D832BFE45FF008623E9 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02A66D7C2BFE45FF008623E9 /* Roboto-Thin.ttf */; };
+		02BDBE132C00BA2C00887C6F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDBE102C00BA2C00887C6F /* DetailViewController.swift */; };
+		02BDBE162C00D43100887C6F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDBE152C00D43100887C6F /* String.swift */; };
+		02BDBE192C00DBFC00887C6F /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BDBE182C00DBFC00887C6F /* SearchBar.xib */; };
+		02BDBE1D2C00DC3A00887C6F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDBE1C2C00DC3A00887C6F /* SearchBar.swift */; };
+		02F93CDB2C00F1F4002027AF /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F93CDA2C00F1F4002027AF /* CustomTabBar.swift */; };
+		02F93CDD2C00F1FB002027AF /* CustomTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F93CDC2C00F1FB002027AF /* CustomTabBar.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +65,12 @@
 		02A66D7A2BFE45FF008623E9 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		02A66D7B2BFE45FF008623E9 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		02A66D7C2BFE45FF008623E9 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		02BDBE102C00BA2C00887C6F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		02BDBE152C00D43100887C6F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		02BDBE182C00DBFC00887C6F /* SearchBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
+		02BDBE1C2C00DC3A00887C6F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		02F93CDA2C00F1F4002027AF /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		02F93CDC2C00F1FB002027AF /* CustomTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBar.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,8 @@
 		020020742BFB4CA500B6D539 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				02F93CD92C00F1DA002027AF /* CustomTabBar */,
+				02BDBE172C00DBDD00887C6F /* SearchBar */,
 				0270E8862BFE2EB600F2118D /* GamesCell */,
 				020020802BFB646900B6D539 /* NavigationBar */,
 				020020812BFB647400B6D539 /* HeaderView */,
@@ -123,6 +137,7 @@
 			children = (
 				028751302BFA2084006E502A /* Supporting Files */,
 				0287512F2BFA2075006E502A /* Storyboards */,
+				02BDBE142C00D41A00887C6F /* Extension */,
 				028751312BFA2094006E502A /* Theme */,
 				0287512C2BFA2067006E502A /* Services */,
 				0287512B2BFA2062006E502A /* Model */,
@@ -181,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				0252AABB2BFA1D96006D1A2D /* HomeViewController.swift */,
+				02BDBE102C00BA2C00887C6F /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -230,6 +246,32 @@
 				02A66D7C2BFE45FF008623E9 /* Roboto-Thin.ttf */,
 			);
 			path = Roboto;
+			sourceTree = "<group>";
+		};
+		02BDBE142C00D41A00887C6F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				02BDBE152C00D43100887C6F /* String.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		02BDBE172C00DBDD00887C6F /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				02BDBE1C2C00DC3A00887C6F /* SearchBar.swift */,
+				02BDBE182C00DBFC00887C6F /* SearchBar.xib */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		02F93CD92C00F1DA002027AF /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				02F93CDA2C00F1F4002027AF /* CustomTabBar.swift */,
+				02F93CDC2C00F1FB002027AF /* CustomTabBar.xib */,
+			);
+			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,10 +345,12 @@
 				0270E87F2BFE14A900F2118D /* PageView.xib in Resources */,
 				02A66D7E2BFE45FF008623E9 /* LICENSE.txt in Resources */,
 				02A66D822BFE45FF008623E9 /* Roboto-Regular.ttf in Resources */,
+				02BDBE192C00DBFC00887C6F /* SearchBar.xib in Resources */,
 				02A66D7F2BFE45FF008623E9 /* Roboto-Bold.ttf in Resources */,
 				0252AAC72BFA1D97006D1A2D /* Base in Resources */,
 				02A66D812BFE45FF008623E9 /* Roboto-Medium.ttf in Resources */,
 				0270E8842BFE2EB300F2118D /* GamesCell.xib in Resources */,
+				02F93CDD2C00F1FB002027AF /* CustomTabBar.xib in Resources */,
 				02A66D832BFE45FF008623E9 /* Roboto-Thin.ttf in Resources */,
 				0252AABF2BFA1D96006D1A2D /* Base in Resources */,
 			);
@@ -319,11 +363,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02BDBE1D2C00DC3A00887C6F /* SearchBar.swift in Sources */,
+				02BDBE132C00BA2C00887C6F /* DetailViewController.swift in Sources */,
+				02F93CDB2C00F1F4002027AF /* CustomTabBar.swift in Sources */,
 				0252AABC2BFA1D96006D1A2D /* HomeViewController.swift in Sources */,
 				02583ABB2BFB422100B6D471 /* Game.swift in Sources */,
 				0252AAB82BFA1D96006D1A2D /* AppDelegate.swift in Sources */,
 				0252AABA2BFA1D96006D1A2D /* SceneDelegate.swift in Sources */,
 				0252AAC22BFA1D96006D1A2D /* GoGame.xcdatamodeld in Sources */,
+				02BDBE162C00D43100887C6F /* String.swift in Sources */,
 				0270E8852BFE2EB300F2118D /* GamesCell.swift in Sources */,
 				02583ABD2BFB437D00B6D471 /* GameNetworking.swift in Sources */,
 				0200207D2BFB5C1500B6D539 /* CustomNavigationBar.swift in Sources */,

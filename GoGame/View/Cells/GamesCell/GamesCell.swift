@@ -26,7 +26,7 @@ class GamesCell: UICollectionViewCell {
     func configure(with game: Game) {
         nameLabel.text = "GTA5"
         titleLabel.text = game.name
-        mainLabel.text = "HANGİ OYUNU DAHA ÇOK SEVİYORUM......"
+        mainLabel.text = "Which game do you want to play?"
         releasedLabel.text = game.released
         gamesImage.layer.cornerRadius = 24
         
