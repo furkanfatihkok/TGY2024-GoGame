@@ -7,9 +7,17 @@
 
 import UIKit
 
+protocol SearchBarProtocol: AnyObject {
+    func searchTextFieldTapped()
+}
+
 class SearchBar: UIView {
     
     @IBOutlet weak var discoverLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var searchTextField: UITextField!
+    
+    weak var delegate: SearchBarProtocol?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,4 +40,9 @@ class SearchBar: UIView {
         view.frame = bounds
         addSubview(view)
     }
+    
+    @IBAction func searchTextButton(_ sender: UITextField) {
+        delegate?.searchTextFieldTapped()
+    }
+    
 }

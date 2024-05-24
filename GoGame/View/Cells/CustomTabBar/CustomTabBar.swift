@@ -9,11 +9,6 @@ import UIKit
 
 class CustomTabBar: UIView {
     
-    @IBOutlet weak var homeButton: UIButton!
-    @IBOutlet weak var networkButton: UIButton!
-    @IBOutlet weak var bookmarkButton: UIButton!
-    @IBOutlet weak var personButton: UIButton!
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureNibView()

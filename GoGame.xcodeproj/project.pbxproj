@@ -25,6 +25,9 @@
 		0270E8812BFE14C800F2118D /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270E8802BFE14C800F2118D /* PageView.swift */; };
 		0270E8842BFE2EB300F2118D /* GamesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0270E8832BFE2EB300F2118D /* GamesCell.xib */; };
 		0270E8852BFE2EB300F2118D /* GamesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270E8822BFE2EB300F2118D /* GamesCell.swift */; };
+		028A3D652C0158CC00BB7931 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A3D642C0158CC00BB7931 /* FavouriteViewController.swift */; };
+		028A3D682C01599100BB7931 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A3D672C01599100BB7931 /* FavouriteCell.swift */; };
+		028A3D6A2C0159A600BB7931 /* FavouriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028A3D692C0159A600BB7931 /* FavouriteCell.xib */; };
 		02A66D7E2BFE45FF008623E9 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 02A66D772BFE45FF008623E9 /* LICENSE.txt */; };
 		02A66D7F2BFE45FF008623E9 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02A66D782BFE45FF008623E9 /* Roboto-Bold.ttf */; };
 		02A66D802BFE45FF008623E9 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02A66D792BFE45FF008623E9 /* Roboto-Light.ttf */; };
@@ -59,6 +62,9 @@
 		0270E8802BFE14C800F2118D /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		0270E8822BFE2EB300F2118D /* GamesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCell.swift; sourceTree = "<group>"; };
 		0270E8832BFE2EB300F2118D /* GamesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesCell.xib; sourceTree = "<group>"; };
+		028A3D642C0158CC00BB7931 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		028A3D672C01599100BB7931 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
+		028A3D692C0159A600BB7931 /* FavouriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCell.xib; sourceTree = "<group>"; };
 		02A66D772BFE45FF008623E9 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		02A66D782BFE45FF008623E9 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		02A66D792BFE45FF008623E9 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -88,12 +94,13 @@
 		020020742BFB4CA500B6D539 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				02F93CD92C00F1DA002027AF /* CustomTabBar */,
-				02BDBE172C00DBDD00887C6F /* SearchBar */,
-				0270E8862BFE2EB600F2118D /* GamesCell */,
 				020020802BFB646900B6D539 /* NavigationBar */,
 				020020812BFB647400B6D539 /* HeaderView */,
 				0270E87D2BFE118700F2118D /* PageController */,
+				02BDBE172C00DBDD00887C6F /* SearchBar */,
+				0270E8862BFE2EB600F2118D /* GamesCell */,
+				02F93CD92C00F1DA002027AF /* CustomTabBar */,
+				028A3D662C01595900BB7931 /* FavouriteCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -197,6 +204,7 @@
 			children = (
 				0252AABB2BFA1D96006D1A2D /* HomeViewController.swift */,
 				02BDBE102C00BA2C00887C6F /* DetailViewController.swift */,
+				028A3D642C0158CC00BB7931 /* FavouriteViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,6 +241,15 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		028A3D662C01595900BB7931 /* FavouriteCell */ = {
+			isa = PBXGroup;
+			children = (
+				028A3D672C01599100BB7931 /* FavouriteCell.swift */,
+				028A3D692C0159A600BB7931 /* FavouriteCell.xib */,
+			);
+			path = FavouriteCell;
 			sourceTree = "<group>";
 		};
 		02A66D7D2BFE45FF008623E9 /* Roboto */ = {
@@ -345,6 +362,7 @@
 				0270E87F2BFE14A900F2118D /* PageView.xib in Resources */,
 				02A66D7E2BFE45FF008623E9 /* LICENSE.txt in Resources */,
 				02A66D822BFE45FF008623E9 /* Roboto-Regular.ttf in Resources */,
+				028A3D6A2C0159A600BB7931 /* FavouriteCell.xib in Resources */,
 				02BDBE192C00DBFC00887C6F /* SearchBar.xib in Resources */,
 				02A66D7F2BFE45FF008623E9 /* Roboto-Bold.ttf in Resources */,
 				0252AAC72BFA1D97006D1A2D /* Base in Resources */,
@@ -376,7 +394,9 @@
 				02583ABD2BFB437D00B6D471 /* GameNetworking.swift in Sources */,
 				0200207D2BFB5C1500B6D539 /* CustomNavigationBar.swift in Sources */,
 				0270E8812BFE14C800F2118D /* PageView.swift in Sources */,
+				028A3D652C0158CC00BB7931 /* FavouriteViewController.swift in Sources */,
 				020020852BFB648900B6D539 /* HeaderView.swift in Sources */,
+				028A3D682C01599100BB7931 /* FavouriteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
