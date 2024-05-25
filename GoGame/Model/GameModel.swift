@@ -1,5 +1,5 @@
 //
-//  Game.swift
+//  GameModel.swift
 //  GoGame
 //
 //  Created by FFK on 20.05.2024.
@@ -8,10 +8,10 @@
 import Foundation
 
 struct GameResponse: Decodable {
-    let results: [Game]
+    let results: [GameModel]
 }
 
-struct Game: Decodable {
+struct GameModel: Decodable {
     let id: Int
     let name: String
     let released: String

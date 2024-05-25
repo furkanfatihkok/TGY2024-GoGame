@@ -5,46 +5,56 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTabBar" customModule="GoGame" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTabBar" customModule="GoGame" customModuleProvider="target">
+            <connections>
+                <outlet property="favouriteButton" destination="ICc-NU-EQF" id="IkS-1h-BK0"/>
+                <outlet property="homeButton" destination="h9a-0H-YIV" id="AeA-Qp-2o8"/>
+                <outlet property="networkButton" destination="UYb-B2-bX8" id="wdR-Z0-gg1"/>
+                <outlet property="personButton" destination="UVK-33-Wdu" id="pTQ-fv-w0r"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="323" height="86"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="177"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZq-cR-OP7">
-                    <rect key="frame" x="0.0" y="0.0" width="323" height="86"/>
+                    <rect key="frame" x="0.0" y="59" width="414" height="84"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eUV-aQ-Y7I" userLabel="hStack">
-                            <rect key="frame" x="8" y="8" width="307" height="70"/>
+                            <rect key="frame" x="8" y="8" width="398" height="68"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9a-0H-YIV">
-                                    <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="68"/>
+                                    <color key="tintColor" red="0.042995818480000003" green="0.15686275059999999" blue="0.049106182989999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="house" catalog="system"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYb-B2-bX8">
-                                    <rect key="frame" x="76.666666666666671" y="0.0" width="77.000000000000014" height="70"/>
+                                    <rect key="frame" x="99.666666666666686" y="0.0" width="99.333333333333314" height="68"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="network" catalog="system"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICc-NU-EQF">
-                                    <rect key="frame" x="153.66666666666666" y="0.0" width="76.666666666666657" height="70"/>
+                                    <rect key="frame" x="199" y="0.0" width="99.666666666666686" height="68"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="bookmark" catalog="system"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVK-33-Wdu">
-                                    <rect key="frame" x="230.33333333333334" y="0.0" width="76.666666666666657" height="70"/>
+                                    <rect key="frame" x="298.66666666666669" y="0.0" width="99.333333333333314" height="68"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="person" catalog="system"/>
                                 </button>
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="eUV-aQ-Y7I" firstAttribute="leading" secondItem="YZq-cR-OP7" secondAttribute="leading" constant="8" id="9r2-hu-XVE"/>
                         <constraint firstAttribute="bottom" secondItem="eUV-aQ-Y7I" secondAttribute="bottom" constant="8" id="Eqb-Y6-NqE"/>
@@ -57,12 +67,12 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="YZq-cR-OP7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3DZ-XI-Aul"/>
-                <constraint firstAttribute="bottom" secondItem="YZq-cR-OP7" secondAttribute="bottom" id="C3F-kM-Vux"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YZq-cR-OP7" secondAttribute="bottom" id="C3F-kM-Vux"/>
                 <constraint firstItem="YZq-cR-OP7" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="e5J-3f-9l0"/>
-                <constraint firstItem="YZq-cR-OP7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pHO-n3-nea"/>
+                <constraint firstItem="YZq-cR-OP7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="pHO-n3-nea"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-142.74809160305344" y="-255.63380281690141"/>
+            <point key="canvasLocation" x="-73.282442748091597" y="-223.59154929577466"/>
         </view>
     </objects>
     <resources>
@@ -70,8 +80,5 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="network" catalog="system" width="128" height="123"/>
         <image name="person" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

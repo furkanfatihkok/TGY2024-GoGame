@@ -9,14 +9,14 @@ import UIKit
 
 
 protocol CustomNavigationProtocol: AnyObject {
-    func searchButtonTapped()
+    func secondButtonTapped()
 }
 
 class CustomNavigationBar: UIView {
     
-    @IBOutlet weak var lineButton: UIButton!
-    @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var bellButton: UIButton!
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
+    @IBOutlet weak var thirdButton: UIButton!
     
     weak var delegate: CustomNavigationProtocol?
     
@@ -44,14 +44,14 @@ class CustomNavigationBar: UIView {
     }
     
     private func setUp() {
-        lineButton.setImage(UIImage(systemName: "line.3.horizontal"), for: .normal)
-        searchButton.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
-        bellButton.setImage(UIImage(systemName: "bell.badge"), for: .normal)
+        firstButton.setImage(UIImage(systemName: "line.3.horizontal"), for: .normal)
+        secondButton.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        thirdButton.setImage(UIImage(systemName: "bell.badge"), for: .normal)
 
     }
     
     @IBAction func searchButton(_ sender: UIButton) {
-        delegate?.searchButtonTapped()
+        delegate?.secondButtonTapped()
     }
     
 }

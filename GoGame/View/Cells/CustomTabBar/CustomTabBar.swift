@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol CustomTabBarProtocol: AnyObject {
+    func favouriteButtonTapped()
+}
+
 class CustomTabBar: UIView {
+    
+    weak var delegate: CustomTabBarProtocol?
+    
+    @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var networkButton: UIButton!
+    @IBOutlet weak var favouriteButton: UIButton!
+    @IBOutlet weak var personButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,6 +40,12 @@ class CustomTabBar: UIView {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
         addSubview(view)
+        
+        favouriteButton.addTarget(self, action: #selector(favouriteButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func favouriteButtonTapped() {
+        delegate?.favouriteButtonTapped()
     }
     
 }

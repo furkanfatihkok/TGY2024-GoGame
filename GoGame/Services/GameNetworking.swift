@@ -32,12 +32,17 @@ enum APIError: Error {
 
 final class GameNetworking {
     
+    // MARK: - Singleton
+    
     static let shared = GameNetworking()
+    private init() {}
+    
+    // MARK: - Properties
     
     let baseURL = "https://api.rawg.io/api/games"
     private let apiKey = "b747ad04c2f14ba68b20fbfcf5bf6002"
     
-    private init() {}
+    // MARK: - Networking Methods
     
     func fetchGames(completion: @escaping (Result<GameResponse, APIError>) -> Void) {
         
