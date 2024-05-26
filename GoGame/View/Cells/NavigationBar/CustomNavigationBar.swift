@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 protocol CustomNavigationProtocol: AnyObject {
     func secondButtonTapped()
 }
@@ -50,8 +49,7 @@ class CustomNavigationBar: UIView {
 
     }
     
-    @IBAction func searchButton(_ sender: UIButton) {
+    @IBAction func secondButton(_ sender: UIButton) {
         delegate?.secondButtonTapped()
     }
-    
 }

@@ -100,11 +100,17 @@ final class DetailViewController: UIViewController {
 extension DetailViewController: CustomNavigationProtocol {
     
     func secondButtonTapped() {
+        guard let gameID = selectedID,
+              let name = gamesName.text,
+              let released = gamesReleased.text else { return }
         
         if navigationBar.secondButton.currentImage == UIImage(systemName: "bookmark.fill") {
             navigationBar.secondButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+            CoreDataManager.shared.deleteGame(id: Int64(gameID))
         } else {
             navigationBar.secondButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            CoreDataManager.shared.saveGame(id: Int64(gameID), name: name, released: released)
         }
     }
+    
 }

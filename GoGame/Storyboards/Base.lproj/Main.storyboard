@@ -97,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="1064.885496183206" y="-2.1126760563380285"/>
         </scene>
-        <!--Network-->
+        <!--Web-->
         <scene sceneID="Hzw-eh-N7X">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="W2d-bM-VpI" customClass="DetailViewController" customModule="GoGame" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,7 +178,7 @@
                             <constraint firstItem="3py-bu-mfo" firstAttribute="height" secondItem="RMl-fK-7Sf" secondAttribute="height" multiplier="0.602113" id="ysK-sS-tol"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Network" image="network" catalog="system" id="4PL-uw-u9C"/>
+                    <tabBarItem key="tabBarItem" title="Web" image="network" catalog="system" id="4PL-uw-u9C"/>
                     <connections>
                         <outlet property="gamesDescription" destination="Z56-qC-c2o" id="heh-lH-Qx6"/>
                         <outlet property="gamesImage" destination="XMh-EG-Tje" id="ofr-3P-h3b"/>
@@ -201,41 +201,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PQJ-vI-hUZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lcy-9c-fhF">
                                 <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RD9-tv-on3">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="PW4-CF-1NU" id="sjG-lR-sXt"/>
-                                    <outlet property="delegate" destination="PW4-CF-1NU" id="Pow-cB-R0U"/>
+                                    <outlet property="dataSource" destination="PW4-CF-1NU" id="jnc-Xi-T1j"/>
+                                    <outlet property="delegate" destination="PW4-CF-1NU" id="dwD-aN-69t"/>
                                 </connections>
-                            </collectionView>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Dy-zS-eVT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PQJ-vI-hUZ" firstAttribute="leading" secondItem="0Dy-zS-eVT" secondAttribute="leading" id="71l-A9-o0Q"/>
-                            <constraint firstItem="PQJ-vI-hUZ" firstAttribute="top" secondItem="0Dy-zS-eVT" secondAttribute="top" id="I5x-aQ-wnH"/>
-                            <constraint firstItem="0Dy-zS-eVT" firstAttribute="trailing" secondItem="PQJ-vI-hUZ" secondAttribute="trailing" id="LD3-Ou-Dfr"/>
-                            <constraint firstItem="0Dy-zS-eVT" firstAttribute="bottom" secondItem="PQJ-vI-hUZ" secondAttribute="bottom" id="Ucn-pT-vZZ"/>
+                            <constraint firstItem="lcy-9c-fhF" firstAttribute="leading" secondItem="0Dy-zS-eVT" secondAttribute="leading" id="IDJ-bB-I0e"/>
+                            <constraint firstItem="0Dy-zS-eVT" firstAttribute="trailing" secondItem="lcy-9c-fhF" secondAttribute="trailing" id="Q4e-Fb-rAZ"/>
+                            <constraint firstItem="0Dy-zS-eVT" firstAttribute="bottom" secondItem="lcy-9c-fhF" secondAttribute="bottom" id="VYr-VY-Ljb"/>
+                            <constraint firstItem="lcy-9c-fhF" firstAttribute="top" secondItem="0Dy-zS-eVT" secondAttribute="top" id="Wfb-du-Ccl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favourite" image="bookmark" catalog="system" id="6jd-5r-kNB"/>
                     <connections>
-                        <outlet property="collectionView" destination="PQJ-vI-hUZ" id="m8Q-vj-JNx"/>
+                        <outlet property="tableView" destination="lcy-9c-fhF" id="hhx-XP-c5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0U-58-Esi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2594.6564885496182" y="-2.1126760563380285"/>
         </scene>
-        <!--Person-->
+        <!--Profile-->
         <scene sceneID="mSj-PE-7Lq">
             <objects>
                 <viewController id="fVh-RP-uv7" sceneMemberID="viewController">
@@ -245,7 +238,7 @@
                         <viewLayoutGuide key="safeArea" id="oDh-jW-r4d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Person" image="person" catalog="system" id="37B-dz-iE3"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="37B-dz-iE3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTe-dy-PPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,6 +250,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9Bh-0f-4TO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6O4-1p-glA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

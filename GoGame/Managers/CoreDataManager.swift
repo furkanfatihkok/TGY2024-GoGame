@@ -5,61 +5,75 @@
 //  Created by FFK on 25.05.2024.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
-final class CoreDataManager {
-    
-    // MARK: - Singleton
-    
+class CoreDataManager {
     static let shared = CoreDataManager()
     private init() {}
 
-    // MARK: - Core Data Operations
-    
-    func saveGame(id: Int, name: String, desc: String, backgroundImage: String) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Game", in: context)!
-        let game = NSManagedObject(entity: entity, insertInto: context)
-        game.setValue(id, forKey: "id")
-        game.setValue(name, forKey: "name")
-
-        do {
-            try context.save()
-        } catch {
-            print("Failed saving")
-        }
+    // Context
+    private var context: NSManagedObjectContext {
+        return persistentContainer.viewContext
     }
 
-    func deleteGame(id: Int) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
-        fetchRequest.predicate = NSPredicate(format: "id = %d", id)
-
-        do {
-            let result = try context.fetch(fetchRequest)
-            for object in result {
-                context.delete(object as! NSManagedObject)
+    // Persistent Container
+    private lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "GoGame") 
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
             }
-            try context.save()
-        } catch {
-            print("Failed deleting")
+        })
+        return container
+    }()
+
+    func saveContext() {
+        if context.hasChanges {
+            do {
+                try context.save()
+                print("Context successfully saved.")
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
         }
     }
 
-    func fetchAllGames() -> [CDGame] {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return [] }
-        let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
+    func saveGame(id: Int64, name: String, released: String) {
+        let game = CDGame(context: context)
+        game.id = id
+        game.name = name
+        game.released = released
+        saveContext()
+        print("Game saved: \(name) with ID: \(id), released: \(released)")
 
+    }
+
+    func fetchAllGames() -> [GameModel] {
+        let fetchRequest: NSFetchRequest<CDGame> = CDGame.fetchRequest()
         do {
-            let result = try context.fetch(fetchRequest)
-            return result as! [CDGame]
+            let games = try context.fetch(fetchRequest)
+            print("Fetched \(games.count) games.")
+            return games.map { GameModel(id: Int($0.id), name: $0.name ?? "", released: $0.released ?? "", backgroundImage: "", rating: 0.0) }
         } catch {
-            print("Failed fetching")
+            print("Error fetching games: \(error)")
             return []
+        }
+    }
+
+    func deleteGame(id: Int64) {
+        let fetchRequest: NSFetchRequest<CDGame> = CDGame.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %d", id)
+        do {
+            let games = try context.fetch(fetchRequest)
+            for game in games {
+                context.delete(game)
+            }
+            saveContext()
+            print("Game with ID \(id) deleted.")
+        } catch {
+            print("Error deleting game: \(error)")
         }
     }
 }

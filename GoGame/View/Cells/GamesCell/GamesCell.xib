@@ -28,31 +28,31 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fyz-u7-2Nx" userLabel="vStack">
-                                <rect key="frame" x="116" y="4" width="300" height="100"/>
+                                <rect key="frame" x="116" y="4" width="205" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43E-PW-zDG">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="33.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="33.333333333333336"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-dD-at4">
-                                        <rect key="frame" x="0.0" y="33.333333333333329" width="300" height="33.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="33.333333333333329" width="205" height="33.333333333333329"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-dq-Ku0" userLabel="hStack">
-                                        <rect key="frame" x="0.0" y="66.666666666666671" width="300" height="33.333333333333329"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-dq-Ku0" userLabel="hStack">
+                                        <rect key="frame" x="0.0" y="66.666666666666671" width="205" height="33.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeu-Vd-VDb">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="33.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="33.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jV6-1K-lYC">
-                                                <rect key="frame" x="150" y="0.0" width="150" height="33.333333333333336"/>
+                                                <rect key="frame" x="140" y="0.0" width="65" height="33.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -61,13 +61,13 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="eud-on-2e7"/>
                                     <constraint firstAttribute="height" constant="100" id="gPz-GR-QRK"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fyz-u7-2Nx" firstAttribute="centerX" secondItem="iiV-8X-9hP" secondAttribute="centerX" id="8Hl-Y7-CVy"/>
                             <constraint firstItem="ekI-WU-Vew" firstAttribute="leading" secondItem="iiV-8X-9hP" secondAttribute="leading" id="Uph-tP-jnm"/>
                             <constraint firstItem="fyz-u7-2Nx" firstAttribute="top" secondItem="iiV-8X-9hP" secondAttribute="top" constant="4" id="foj-A4-120"/>
                             <constraint firstItem="fyz-u7-2Nx" firstAttribute="leading" secondItem="ekI-WU-Vew" secondAttribute="trailing" constant="16" id="p2y-2x-RTf"/>

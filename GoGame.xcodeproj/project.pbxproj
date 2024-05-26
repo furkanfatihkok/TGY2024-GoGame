@@ -29,8 +29,6 @@
 		027E0C682C02170200A62564 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E0C672C02170200A62564 /* HomeViewModel.swift */; };
 		027E0C6A2C021D4B00A62564 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E0C692C021D4B00A62564 /* DetailViewModel.swift */; };
 		028A3D652C0158CC00BB7931 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A3D642C0158CC00BB7931 /* FavouriteViewController.swift */; };
-		028A3D682C01599100BB7931 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A3D672C01599100BB7931 /* FavouriteCell.swift */; };
-		028A3D6A2C0159A600BB7931 /* FavouriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028A3D692C0159A600BB7931 /* FavouriteCell.xib */; };
 		02A66D7E2BFE45FF008623E9 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 02A66D772BFE45FF008623E9 /* LICENSE.txt */; };
 		02A66D7F2BFE45FF008623E9 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02A66D782BFE45FF008623E9 /* Roboto-Bold.ttf */; };
 		02A66D802BFE45FF008623E9 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02A66D792BFE45FF008623E9 /* Roboto-Light.ttf */; };
@@ -41,6 +39,11 @@
 		02BDBE162C00D43100887C6F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDBE152C00D43100887C6F /* String.swift */; };
 		02BDBE192C00DBFC00887C6F /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BDBE182C00DBFC00887C6F /* SearchBar.xib */; };
 		02BDBE1D2C00DC3A00887C6F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDBE1C2C00DC3A00887C6F /* SearchBar.swift */; };
+		02E0DDAA2C03226800697572 /* CDGame+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E0DDA82C03226800697572 /* CDGame+CoreDataClass.swift */; };
+		02E0DDAB2C03226800697572 /* CDGame+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E0DDA92C03226800697572 /* CDGame+CoreDataProperties.swift */; };
+		02E0DDB22C032A7C00697572 /* FavouriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E0DDB12C032A7C00697572 /* FavouriteCell.xib */; };
+		02E0DDB32C032A7C00697572 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E0DDB02C032A7C00697572 /* FavouriteCell.swift */; };
+		02E439662C023B6B001291F0 /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E439652C023B6B001291F0 /* HideKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,8 +70,6 @@
 		027E0C672C02170200A62564 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		027E0C692C021D4B00A62564 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		028A3D642C0158CC00BB7931 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
-		028A3D672C01599100BB7931 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
-		028A3D692C0159A600BB7931 /* FavouriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCell.xib; sourceTree = "<group>"; };
 		02A66D772BFE45FF008623E9 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		02A66D782BFE45FF008623E9 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		02A66D792BFE45FF008623E9 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -79,6 +80,11 @@
 		02BDBE152C00D43100887C6F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		02BDBE182C00DBFC00887C6F /* SearchBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
 		02BDBE1C2C00DC3A00887C6F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		02E0DDA82C03226800697572 /* CDGame+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDGame+CoreDataClass.swift"; sourceTree = "<group>"; };
+		02E0DDA92C03226800697572 /* CDGame+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDGame+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		02E0DDB02C032A7C00697572 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
+		02E0DDB12C032A7C00697572 /* FavouriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCell.xib; sourceTree = "<group>"; };
+		02E439652C023B6B001291F0 /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 		0252AAAB2BFA1D96006D1A2D = {
 			isa = PBXGroup;
 			children = (
+				02E0DDA82C03226800697572 /* CDGame+CoreDataClass.swift */,
+				02E0DDA92C03226800697572 /* CDGame+CoreDataProperties.swift */,
 				0252AAB62BFA1D96006D1A2D /* GoGame */,
 				0252AAB52BFA1D96006D1A2D /* Products */,
 			);
@@ -258,8 +266,8 @@
 		028A3D662C01595900BB7931 /* FavouriteCell */ = {
 			isa = PBXGroup;
 			children = (
-				028A3D672C01599100BB7931 /* FavouriteCell.swift */,
-				028A3D692C0159A600BB7931 /* FavouriteCell.xib */,
+				02E0DDB02C032A7C00697572 /* FavouriteCell.swift */,
+				02E0DDB12C032A7C00697572 /* FavouriteCell.xib */,
 			);
 			path = FavouriteCell;
 			sourceTree = "<group>";
@@ -281,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				02BDBE152C00D43100887C6F /* String.swift */,
+				02E439652C023B6B001291F0 /* HideKeyboard.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -364,8 +373,8 @@
 				0252AAC42BFA1D97006D1A2D /* Assets.xcassets in Resources */,
 				0270E87F2BFE14A900F2118D /* PageView.xib in Resources */,
 				02A66D7E2BFE45FF008623E9 /* LICENSE.txt in Resources */,
+				02E0DDB22C032A7C00697572 /* FavouriteCell.xib in Resources */,
 				02A66D822BFE45FF008623E9 /* Roboto-Regular.ttf in Resources */,
-				028A3D6A2C0159A600BB7931 /* FavouriteCell.xib in Resources */,
 				02BDBE192C00DBFC00887C6F /* SearchBar.xib in Resources */,
 				02A66D7F2BFE45FF008623E9 /* Roboto-Bold.ttf in Resources */,
 				0252AAC72BFA1D97006D1A2D /* Base in Resources */,
@@ -388,19 +397,22 @@
 				02BDBE132C00BA2C00887C6F /* DetailViewController.swift in Sources */,
 				0252AABC2BFA1D96006D1A2D /* HomeViewController.swift in Sources */,
 				027E0C5C2C01EA7400A62564 /* CoreDataManager.swift in Sources */,
+				02E439662C023B6B001291F0 /* HideKeyboard.swift in Sources */,
 				02583ABB2BFB422100B6D471 /* GameModel.swift in Sources */,
 				0252AAB82BFA1D96006D1A2D /* AppDelegate.swift in Sources */,
+				02E0DDAA2C03226800697572 /* CDGame+CoreDataClass.swift in Sources */,
+				02E0DDAB2C03226800697572 /* CDGame+CoreDataProperties.swift in Sources */,
 				0252AABA2BFA1D96006D1A2D /* SceneDelegate.swift in Sources */,
 				0252AAC22BFA1D96006D1A2D /* GoGame.xcdatamodeld in Sources */,
 				02BDBE162C00D43100887C6F /* String.swift in Sources */,
 				0270E8852BFE2EB300F2118D /* GamesCell.swift in Sources */,
 				02583ABD2BFB437D00B6D471 /* GameNetworking.swift in Sources */,
 				0200207D2BFB5C1500B6D539 /* CustomNavigationBar.swift in Sources */,
+				02E0DDB32C032A7C00697572 /* FavouriteCell.swift in Sources */,
 				027E0C6A2C021D4B00A62564 /* DetailViewModel.swift in Sources */,
 				0270E8812BFE14C800F2118D /* PageView.swift in Sources */,
 				028A3D652C0158CC00BB7931 /* FavouriteViewController.swift in Sources */,
 				020020852BFB648900B6D539 /* HeaderView.swift in Sources */,
-				028A3D682C01599100BB7931 /* FavouriteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

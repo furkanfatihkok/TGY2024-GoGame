@@ -28,6 +28,7 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupViewModel()
         setupUI()
+        hideKeyboardWhenTappedAround()
     }
     
     // MARK: - Setup
@@ -49,6 +50,7 @@ final class HomeViewController: UIViewController {
     }
     
     private func setupUI() {
+        tabBarController?.delegate = self
         customNavigationBar.delegate = self
         customSearchBar.searchTextField.delegate = self
         pageView.pageImage.layer.cornerRadius = 24
@@ -108,19 +110,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 //MARK: - CustomNavigationProtocol
 
 extension HomeViewController: CustomNavigationProtocol {
-    
+
     func secondButtonTapped() {
         customNavigationBar.thirdButton.isHidden = true
         customNavigationBar.firstButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         customNavigationBar.secondButton.isHidden = true
-        
         pageView.isHidden = true
         headerView.isHidden = true
         
         customSearchBar.isHidden = false
-        
     }
-    
 }
 
 //MARK: - TextFieldDelegate
@@ -144,4 +143,14 @@ extension HomeViewController:  UITextFieldDelegate {
     
 }
 
+//MARK: - Tab Bar Delegate
 
+extension HomeViewController: UITabBarControllerDelegate {
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        if viewController == tabBarController.viewControllers?[1] || viewController == tabBarController.viewControllers?[3] { return false
+        }
+        return true
+    }
+}

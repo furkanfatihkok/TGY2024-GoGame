@@ -62,7 +62,7 @@
                                 <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="searchButton:" destination="-1" eventType="touchUpInside" id="x3C-5O-Vb3"/>
+                                <action selector="secondButton:" destination="-1" eventType="touchUpInside" id="5fw-uD-zof"/>
                             </connections>
                         </button>
                     </subviews>
