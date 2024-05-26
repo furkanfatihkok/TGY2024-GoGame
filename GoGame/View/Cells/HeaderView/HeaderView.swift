@@ -22,13 +22,13 @@ class HeaderView: UIView {
         configureNibView()
     }
     
-    func loadViewFromNib() -> UIView? {
+    private func loadViewFromNib() -> UIView? {
         let nibName = String(describing: type(of: self))
         let nib = UINib(nibName: nibName, bundle: .main)
         return nib.instantiate(withOwner: self).first as? UIView
     }
     
-    func configureNibView() {
+    private func configureNibView() {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
         addSubview(view)

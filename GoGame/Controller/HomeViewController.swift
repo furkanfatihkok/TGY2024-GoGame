@@ -110,7 +110,17 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 //MARK: - CustomNavigationProtocol
 
 extension HomeViewController: CustomNavigationProtocol {
-
+    
+    func firstButtonTapped() {
+        customNavigationBar.thirdButton.isHidden = false
+        customNavigationBar.firstButton.setImage(UIImage(systemName: "line.3.horizontal"), for: .normal)
+        customNavigationBar.secondButton.isHidden = false
+        pageView.isHidden = false
+        headerView.isHidden = false
+        
+        customSearchBar.isHidden = true
+    }
+    
     func secondButtonTapped() {
         customNavigationBar.thirdButton.isHidden = true
         customNavigationBar.firstButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)

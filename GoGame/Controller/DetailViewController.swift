@@ -41,8 +41,6 @@ final class DetailViewController: UIViewController {
         navigationBar.firstButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         navigationBar.secondButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
         navigationBar.thirdButton.setImage(UIImage(systemName: "ellipsis"), for: .normal)
-        navigationBar.firstButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
-        navigationBar.thirdButton.layer.cornerRadius = 25
         
         mainView.layer.cornerRadius = 24
         gamesImage.layer.cornerRadius = 25
@@ -86,20 +84,18 @@ final class DetailViewController: UIViewController {
             imageView.image = nil
         }
     }
-    
-    //MARK: - Actions
-    
-    @objc private func dismissView() {
-        self.dismiss(animated: true)
-    }
-    
 }
 
 //MARK: - CustomNavigationProtocol
 
 extension DetailViewController: CustomNavigationProtocol {
     
+    func firstButtonTapped() {
+        self.dismiss(animated: true)
+    }
+    
     func secondButtonTapped() {
+        
         guard let gameID = selectedID,
               let name = gamesName.text,
               let released = gamesReleased.text else { return }

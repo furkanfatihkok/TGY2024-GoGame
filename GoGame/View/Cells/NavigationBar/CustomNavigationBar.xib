@@ -36,6 +36,9 @@
                             <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
                                 <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="firstButton:" destination="-1" eventType="touchUpInside" id="reL-tx-9qX"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3L-tu-uUS">
                             <rect key="frame" x="270" y="0.0" width="50" height="50"/>
@@ -93,7 +96,7 @@
         <image name="bell.badge" catalog="system" width="117" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
