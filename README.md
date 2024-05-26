@@ -1,6 +1,4 @@
 # GoGame
-
-//TODO:
 <p align="center">
   <img width="146" alt="GoGame" src="https://github.com/furkanfatihkok/TGY2024-GoGame/assets/113316242/d20f554c-29b9-49c9-8c5b-f09eedc99ec2">
 </p>
@@ -53,7 +51,7 @@ Before you begin, ensure you have the following:
 
 Also, make sure that these dependencies are added in your project's target:
 
-- [KingFisher](https://github.com/onevcat/Kingfisher): Kingfisher is a popular asynchronous image downloading and caching library for iOS and macOS apps. This library ensures smooth user experience by performing download and caching operations in the background, preventing thread congestion.
+- [Kingfisher](https://github.com/onevcat/Kingfisher): Kingfisher is a popular asynchronous image downloading and caching library for iOS and macOS apps. This library ensures smooth user experience by performing download and caching operations in the background, preventing thread congestion.
 
 
 ### Installation
@@ -80,11 +78,11 @@ Also, make sure that these dependencies are added in your project's target:
 
 ## Usage
 
-###  Home Screen //TODO:
+###  Home Screen
 
 1. Open the app on your simulator or device.
-2. Browse the coins, click on the sections to see the values of the coins.
-3. Go to Coin Detail by tapping on the relevant coin.
+2. You can access the game information by clicking on the screen where we see the games. And we can see the game dates and ratings.
+3. Tap on the relevant game to go to Game Detail.
 
 <p align="left">
   <img src="https://github.com/furkanfatihkok/TGY2024-GoGame/assets/113316242/72dee8b8-8aaa-47cd-8c00-e758e156a297" alt="Home Screen" width="200" height="400">
@@ -92,10 +90,10 @@ Also, make sure that these dependencies are added in your project's target:
 
 ---
 
-### Detail Screen //TODO:
+### Detail Screen
 
-1. Look at the chart for the coin.
-2. Check the coin status with the search action to look for other coins.
+1. See the description of the relevant game.
+2. Click on the top right button to save the corresponding game.
 
 <p align="left">
   <img src="https://github.com/furkanfatihkok/TGY2024-GoGame/assets/113316242/3ec36f66-608f-49bd-b02c-cd77acfb0e86" alt="Detail Screen" width="200" height="400">
@@ -103,10 +101,9 @@ Also, make sure that these dependencies are added in your project's target:
 
 ---
 
-### Favourite Screen //TODO:
+### Favourite Screen 
 
-1. Look at the chart for the coin.
-2. Check the coin status with the search action to look for other coins. 
+1. We can see the list of saved games.
 
 <p align="left">
   <img src="https://github.com/furkanfatihkok/TGY2024-GoGame/assets/113316242/ea06df89-5afb-4909-b61e-445d37155dd8" alt="Favourite Screen" width="200" height="400">
@@ -114,10 +111,9 @@ Also, make sure that these dependencies are added in your project's target:
 
 ---
 
-### Search //TODO:
+### Search 
 
-1. Look at the chart for the coin.
-2. Check the coin status with the search action to look for other coins.
+1. By searching for the game we want, we can switch to the details of the game we have chosen.
 
 <p align="left">
   <img src="https://github.com/furkanfatihkok/TGY2024-GoGame/assets/113316242/fc45e59a-4666-48bb-a12c-acb02b9bafe8" alt="Search" width="200" height="400">
@@ -125,4 +121,5 @@ Also, make sure that these dependencies are added in your project's target:
 
 ---
 ### Known Issues
-The filtering process does not work adequately for the coins I want to search.
+1. The filtering doesn't work well enough for the games I want to search for. 
+2. During the filtering process, there is no transition on the detail page.
