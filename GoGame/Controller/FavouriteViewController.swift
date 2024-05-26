@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 final class FavouriteViewController: UIViewController {
     
@@ -17,15 +18,17 @@ final class FavouriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         fetchFavoriteGames()
     }
     
     private func setupCollectionView() {
-        
         tableView.register(UINib(nibName: FavouriteCell.identifier, bundle: nil), forCellReuseIdentifier: FavouriteCell.identifier)
     }
     
-    private func fetchFavoriteGames() {
+    func fetchFavoriteGames() {
         favouriteGames = CoreDataManager.shared.fetchAllGames()
         tableView.reloadData()
     }
@@ -48,5 +51,15 @@ extension FavouriteViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let game = favouriteGames[indexPath.row]
+            CoreDataManager.shared.deleteGame(id: Int64(game.id))
+            
+            favouriteGames.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
